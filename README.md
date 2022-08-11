@@ -17,9 +17,16 @@ graphic representation should ultimately be done by means of serial transmission
 estimated results can be realized on a display device.
 
 
-<p align="center"><img src='images/Foto_MikrofonArray_Frontansicht.JPG' width='50%'></p>
 
-<p align="center"><img src='images/Foto_DSP.JPG' width='50%'></p>
+<p align="center"><img src='images/Sprecher_In_Raum.png' width='60%'></p>
+
+
+<p align="center">
+<img src='images/Foto_MikrofonArray_Frontansicht.JPG' height='400px'>
+<img src='images/Foto_DSP.JPG' height='400px'>
+<br>
+Main Hardware Components
+</p>
 
 
 
