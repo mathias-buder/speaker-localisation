@@ -79,3 +79,11 @@ of the overall system:
 5. to ensure the continuity of the results, there must be a continuous flow of data between input and output.
     between the input and output interfaces must be guaranteed.
     be guaranteed.
+
+
+
+<p align="center">
+<img src='images/mccc_algo.gif' width='100%'>
+<br>
+Multichannel Cross-Correlation Coefficient Algorithm
+</p>
