@@ -1,0 +1,359 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.3.1                      
+******************************************************************************
+>> Linked Mon Sep 23 23:59:40 2013
+
+OUTPUT FILE NAME:   <3D_Speaker_Tracking.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00023000
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  VECT                  00000000   00000200  00000000  00000200  RWIX
+  IRAM                  00001200   0002ee00  00023793  0000b66d  RWIX
+  SBSRAM                80000000   00080000  00000000  00080000  RWIX
+  SDRAM                 b0000000   01000000  00000000  01000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.data      0    00001200    00000000     UNINITIALIZED
+
+.far       0    00001200    0001983f     UNINITIALIZED
+                  00001200    000144f2     defines_globals.obj (.far)
+                  000156f2    00000002     --HOLE--
+                  000156f4    00005044     main.obj (.far)
+                  0001a738    00000120     rts6700.lib : pow.obj (.far)
+                  0001a858    0000008c                 : exit.obj (.far)
+                  0001a8e4    00000004                 : errno.obj (.far)
+                  0001a8e8    00000060                 : acos.obj (.far)
+                  0001a948    00000060                 : asin.obj (.far)
+                  0001a9a8    00000040                 : cos.obj (.far)
+                  0001a9e8    00000040                 : sin.obj (.far)
+                  0001aa28    00000008                 : _lock.obj (.far)
+                  0001aa30    00000008                 : memory.obj (.far)
+                  0001aa38    00000007     functions.obj (.far)
+
+.bss       0    00001200    00000000     UNINITIALIZED
+
+.text      0    0001aa40    00008760     
+                  0001aa40    00002a20     functions.obj (.text)
+                  0001d460    00000e80     main.obj (.text)
+                  0001e2e0    000009e0     rts6700.lib : pow.obj (.text:_pow)
+                  0001ecc0    00000780     defines_globals.obj (.text)
+                  0001f440    00000640     dsp67x.lib : DSPF_sp_icfftr2_dif.obj (.text)
+                  0001fa80    000004e0                : DSPF_sp_cfftr2_dit.obj (.text)
+                  0001ff60    000003a0     rts6700.lib : cos.obj (.text:_cos)
+                  00020300    00000380                 : acos.obj (.text:_acos)
+                  00020680    00000360                 : sin.obj (.text:_sin)
+                  000209e0    00000340                 : asin.obj (.text:_asin)
+                  00020d20    00000320                 : frcdivd.obj (.text:__frcdivd)
+                  00021040    00000280                 : divd.obj (.text:__divd)
+                  000212c0    00000280                 : sqrt.obj (.text:_sqrt)
+                  00021540    00000260     dsp67x.lib : DSPF_sp_bitrev_cplx.obj (.text)
+                  000217a0    00000240     rts6700.lib : memcpy62.obj (.text:_memcpy)
+                  000219e0    00000200                 : memory.obj (.text:_malloc)
+                  00021be0    000001c0                 : sqrtf.obj (.text:_sqrtf)
+                  00021da0    000001a0                 : divf.obj (.text:__divf)
+                  00021f40    000001a0                 : ldexp.obj (.text:_ldexp)
+                  000220e0    00000160                 : frexp.obj (.text:_frexp)
+                  00022240    00000160                 : ldexpf.obj (.text:_ldexpf)
+                  000223a0    00000140                 : strasg.obj (.text:__strasgi)
+                  000224e0    00000140                 : exit.obj (.text:_exit)
+                  00022620    00000140                 : memset.obj (.text:_memset)
+                  00022760    00000120                 : autoinit.obj (.text:__auto_init)
+                  00022880    00000120                 : divi.obj (.text:__divi)
+                  000229a0    00000100                 : frcdivf.obj (.text:__frcdivf)
+                  00022aa0    00000100                 : frexpf.obj (.text:_frexpf)
+                  00022ba0    00000100     main.obj (.text:retain)
+                  00022ca0    000000e0     rts6700.lib : round.obj (.text:__round)
+                  00022d80    000000e0                 : memory.obj (.text:_minsert)
+                  00022e60    000000e0                 : modf.obj (.text:_modf)
+                  00022f40    000000c0                 : memory.obj (.text:_mremove)
+                  00023000    00000080                 : boot.obj (.text:_c_int00)
+                  00023080    00000060                 : ceil.obj (.text:_ceil)
+                  000230e0    00000040                 : args_main.obj (.text:__args_main)
+                  00023120    00000040                 : trunc.obj (.text:__trunc)
+                  00023160    00000020                 : _lock.obj (.text:__nop)
+                  00023180    00000020                 : exit.obj (.text:_abort)
+
+.sysmem    0    000231a0    00001000     UNINITIALIZED
+                  000231a0    00000008     rts6700.lib : memory.obj (.sysmem)
+                  000231a8    00000ff8     --HOLE--
+
+.stack     0    000241a0    00000400     UNINITIALIZED
+                  000241a0    00000008     rts6700.lib : boot.obj (.stack)
+                  000241a8    000003f8     --HOLE--
+
+.cinit     0    000245a0    000003c4     
+                  000245a0    00000140     rts6700.lib : pow.obj (.cinit)
+                  000246e0    0000008c     main.obj (.cinit)
+                  0002476c    00000004     --HOLE-- [fill = 0]
+                  00024770    00000068     rts6700.lib : acos.obj (.cinit)
+                  000247d8    00000068                 : asin.obj (.cinit)
+                  00024840    00000048                 : cos.obj (.cinit)
+                  00024888    00000048                 : sin.obj (.cinit)
+                  000248d0    0000002c                 : exit.obj (.cinit)
+                  000248fc    00000004     --HOLE-- [fill = 0]
+                  00024900    0000002c                 : memory.obj (.cinit)
+                  0002492c    00000004     --HOLE-- [fill = 0]
+                  00024930    0000001c                 : _lock.obj (.cinit)
+                  0002494c    00000004     --HOLE-- [fill = 0]
+                  00024950    0000000c                 : errno.obj (.cinit)
+                  0002495c    00000004     --HOLE-- [fill = 0]
+                  00024960    00000004     (.pad.cinit) [fill = 0]
+
+.const     0    00024964    00000020     
+                  00024964    00000020     main.obj (.const:_$P$T0$1)
+
+.switch    0    00024984    00000010     
+                  00024984    00000010     rts6700.lib : frcdivd.obj (.switch)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+00001200   $bss
+00001200   .bss
+00001200   .data
+0001aa40   .text
+00023180   C$$EXIT
+0001d2d4   _CalcAngleLUTs
+0001b7a4   _CalcDetNxN
+0001d248   _CalcEnergy
+0001d164   _CalcMicDistance
+0001cfe8   _CalcMicMatrix
+0001cf34   _CalcVariance
+0001c788   _CmplxConjMul
+0001ceb4   _Copy2CmplxStruct
+0001cd14   _CreateHistogram
+0001b108   _Create_R
+00021540   _DSPF_sp_bitrev_cplx
+0001fa80   _DSPF_sp_cfftr2_dit
+0001f440   _DSPF_sp_icfftr2_dif
+0001c90c   _FastCrossCorrelation
+0001ecc0   _Init
+0001bad0   _SearchAndFind
+0001afe0   _Short2ASCII
+0001ad78   _UCAFunctionTauRound
+00001600   _W
+000245a0   __STACK_END
+00000400   __STACK_SIZE
+00001000   __SYSMEM_SIZE
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+00001200   ___bss__
+ffffffff   ___c_args__
+000245a0   ___cinit__
+00001200   ___data__
+00001200   ___edata__
+00001200   ___end__
+000231a0   ___etext__
+ffffffff   ___pinit__
+0001aa40   ___text__
+000230e0   __args_main
+00022760   __auto_init
+0001a8dc   __cleanup_ptr
+00021040   __divd
+00021da0   __divf
+00022880   __divi
+0001a8e0   __dtors_ptr
+00020d20   __frcdivd
+000229a0   __frcdivf
+0001aa28   __lock
+00023160   __nop
+00022ca0   __round
+000241a0   __stack
+000223a0   __strasgi
+000231a0   __sys_memory
+00023120   __trunc
+0001aa2c   __unlock
+00023180   _abort
+00020300   _acos
+000156f4   _adcbuffer
+000209e0   _asin
+00023000   _c_int00
+00023080   _ceil
+00000bf0   _clr_module_cfg
+0001ff60   _cos
+000196f4   _dacbuffer
+0001ad2c   _deg2rad
+0001abe0   _digitrev_index
+00022ba0   _edma_complete_int
+0001a6f8   _energielimit
+0001a8e4   _errno
+000224e0   _exit
+0001a70c   _f_Phi_Hist_deg
+0001a714   _f_Phi_Hist_rad
+0001a6fc   _f_Phi_deg
+0001a704   _f_Phi_rad
+0001a710   _f_Theta_Hist_deg
+0001a718   _f_Theta_Hist_rad
+0001a700   _f_Theta_deg
+0001a708   _f_Theta_rad
+000220e0   _frexp
+00022aa0   _frexpf
+00001200   _iTwid
+00000314   _init_module
+00000500   _init_uart
+00000cec   _install_interrupt
+000156f0   _int16_HistogramThreshold
+0001a6f4   _int16_block
+0001a6f6   _int16_idx
+00021f40   _ldexp
+00022240   _ldexpf
+0001d460   _main
+000219e0   _malloc
+000217a0   _memcpy
+00022620   _memset
+00022e60   _modf
+0001e2e0   _pow
+0001ab9c   _rad2deg
+00000650   _send_char
+0001aa40   _send_string
+00000bc8   _set_module_cfg
+00020680   _sin
+000212c0   _sqrt
+00021be0   _sqrtf
+00002850   _st_Buf
+00002600   _st_CubeArray
+0001a71c   _st_InitUART
+00015698   _st_Phi
+000156c4   _st_Theta
+ffffffff   binit
+000245a0   cinit
+00001200   edata
+00001200   end
+000231a0   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000314   _init_module
+00000400   __STACK_SIZE
+00000500   _init_uart
+00000650   _send_char
+00000bc8   _set_module_cfg
+00000bf0   _clr_module_cfg
+00000cec   _install_interrupt
+00001000   __SYSMEM_SIZE
+00001200   $bss
+00001200   .bss
+00001200   .data
+00001200   ___bss__
+00001200   ___data__
+00001200   ___edata__
+00001200   ___end__
+00001200   _iTwid
+00001200   edata
+00001200   end
+00001600   _W
+00002600   _st_CubeArray
+00002850   _st_Buf
+00015698   _st_Phi
+000156c4   _st_Theta
+000156f0   _int16_HistogramThreshold
+000156f4   _adcbuffer
+000196f4   _dacbuffer
+0001a6f4   _int16_block
+0001a6f6   _int16_idx
+0001a6f8   _energielimit
+0001a6fc   _f_Phi_deg
+0001a700   _f_Theta_deg
+0001a704   _f_Phi_rad
+0001a708   _f_Theta_rad
+0001a70c   _f_Phi_Hist_deg
+0001a710   _f_Theta_Hist_deg
+0001a714   _f_Phi_Hist_rad
+0001a718   _f_Theta_Hist_rad
+0001a71c   _st_InitUART
+0001a8dc   __cleanup_ptr
+0001a8e0   __dtors_ptr
+0001a8e4   _errno
+0001aa28   __lock
+0001aa2c   __unlock
+0001aa40   .text
+0001aa40   ___text__
+0001aa40   _send_string
+0001ab9c   _rad2deg
+0001abe0   _digitrev_index
+0001ad2c   _deg2rad
+0001ad78   _UCAFunctionTauRound
+0001afe0   _Short2ASCII
+0001b108   _Create_R
+0001b7a4   _CalcDetNxN
+0001bad0   _SearchAndFind
+0001c788   _CmplxConjMul
+0001c90c   _FastCrossCorrelation
+0001cd14   _CreateHistogram
+0001ceb4   _Copy2CmplxStruct
+0001cf34   _CalcVariance
+0001cfe8   _CalcMicMatrix
+0001d164   _CalcMicDistance
+0001d248   _CalcEnergy
+0001d2d4   _CalcAngleLUTs
+0001d460   _main
+0001e2e0   _pow
+0001ecc0   _Init
+0001f440   _DSPF_sp_icfftr2_dif
+0001fa80   _DSPF_sp_cfftr2_dit
+0001ff60   _cos
+00020300   _acos
+00020680   _sin
+000209e0   _asin
+00020d20   __frcdivd
+00021040   __divd
+000212c0   _sqrt
+00021540   _DSPF_sp_bitrev_cplx
+000217a0   _memcpy
+000219e0   _malloc
+00021be0   _sqrtf
+00021da0   __divf
+00021f40   _ldexp
+000220e0   _frexp
+00022240   _ldexpf
+000223a0   __strasgi
+000224e0   _exit
+00022620   _memset
+00022760   __auto_init
+00022880   __divi
+000229a0   __frcdivf
+00022aa0   _frexpf
+00022ba0   _edma_complete_int
+00022ca0   __round
+00022e60   _modf
+00023000   _c_int00
+00023080   _ceil
+000230e0   __args_main
+00023120   __trunc
+00023160   __nop
+00023180   C$$EXIT
+00023180   _abort
+000231a0   ___etext__
+000231a0   __sys_memory
+000231a0   etext
+000241a0   __stack
+000245a0   __STACK_END
+000245a0   ___cinit__
+000245a0   cinit
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[115 symbols]

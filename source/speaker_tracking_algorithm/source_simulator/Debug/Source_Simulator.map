@@ -1,0 +1,241 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.3.1                      
+******************************************************************************
+>> Linked Thu Jul 25 15:58:46 2013
+
+OUTPUT FILE NAME:   <Source_Simulator.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 00021140
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  VECT                  00000000   00000200  00000000  00000200  RWIX
+  IRAM                  00001200   0002ee00  000205dc  0000e824  RWIX
+  SBSRAM                80000000   00080000  00000000  00080000  RWIX
+  SDRAM                 b0000000   01000000  00000000  01000000  RWIX
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.data      0    00001200    00000000     UNINITIALIZED
+
+.far       0    00001200    0001c9e0     UNINITIALIZED
+                  00001200    0001c940     main.obj (.far)
+                  0001db40    00000040     rts6700.lib : cos.obj (.far)
+                  0001db80    00000040                 : sin.obj (.far)
+                  0001dbc0    0000000c                 : exit.obj (.far)
+                  0001dbcc    00000008                 : _lock.obj (.far)
+                  0001dbd4    00000004     --HOLE--
+                  0001dbd8    00000008                 : rand.obj (.far)
+
+.text      0    0001dbe0    000036a0     
+                  0001dbe0    000018c0     main.obj (.text)
+                  0001f4a0    000004e0     dsp67x.lib : DSPF_sp_cfftr2_dit.obj (.text)
+                  0001f980    00000420     set_edma.obj (.text)
+                  0001fda0    00000360     rts6700.lib : cos.obj (.text:_cos)
+                  00020100    00000340                 : divf.obj (.text:__divf)
+                  00020440    00000340                 : sin.obj (.text:_sin)
+                  00020780    00000240                 : memcpy62.obj (.text:_memcpy)
+                  000209c0    00000160                 : autoinit.obj (.text:__auto_init)
+                  00020b20    00000140                 : strasg.obj (.text:__strasgi)
+                  00020c60    00000120                 : exit.obj (.text:_exit)
+                  00020d80    000000c0                 : round.obj (.text:__nround)
+                  00020e40    000000c0                 : cpy_tbl.obj (.text:_copy_in)
+                  00020f00    000000c0                 : modf.obj (.text:_modf)
+                  00020fc0    000000c0                 : rand.obj (.text:_rand)
+                  00021080    000000c0     set_edma.obj (.text:retain)
+                  00021140    00000080     rts6700.lib : boot.obj (.text:_c_int00)
+                  000211c0    00000040                 : args_main.obj (.text:__args_main)
+                  00021200    00000040                 : trunc.obj (.text:__trunc)
+                  00021240    00000020                 : _lock.obj (.text:__nop)
+                  00021260    00000020                 : exit.obj (.text:_abort)
+
+.stack     0    00021280    00000400     UNINITIALIZED
+                  00021280    00000008     rts6700.lib : boot.obj (.stack)
+                  00021288    000003f8     --HOLE--
+
+.cinit     0    00021680    0000012c     
+                  00021680    00000048     rts6700.lib : cos.obj (.cinit)
+                  000216c8    00000048                 : sin.obj (.cinit)
+                  00021710    00000038     main.obj (.cinit)
+                  00021748    0000002c     rts6700.lib : exit.obj (.cinit)
+                  00021774    00000004     --HOLE-- [fill = 0]
+                  00021778    0000001c                 : _lock.obj (.cinit)
+                  00021794    00000004     --HOLE-- [fill = 0]
+                  00021798    00000010                 : rand.obj (.cinit)
+                  000217a8    00000004     --HOLE-- [fill = 0]
+
+.const     0    000217ac    00000020     
+                  000217ac    00000020     main.obj (.const:_$P$T0$1)
+
+.bss       0    000217cc    00000010     UNINITIALIZED
+                  000217cc    00000010     main.obj (.bss)
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+000217cc   $bss
+000217cc   .bss
+00001200   .data
+0001dbe0   .text
+00021260   C$$EXIT
+0001f4a0   _DSPF_sp_cfftr2_dit
+0000db20   _H
+00021680   __STACK_END
+00000400   __STACK_SIZE
+00000001   __TI_args_main
+0001dbc8   ___TI_enable_exit_profile_output
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+000217cc   ___bss__
+ffffffff   ___c_args__
+00021680   ___cinit__
+00001200   ___data__
+00001200   ___edata__
+000217dc   ___end__
+00021280   ___etext__
+ffffffff   ___pinit__
+0001dbe0   ___text__
+000211c0   __args_main
+000209c0   __auto_init
+00020b20   __c6xabi_strasgi
+0001dbc0   __cleanup_ptr
+00020100   __divf
+0001dbc4   __dtors_ptr
+0001dbcc   __lock
+00021240   __nop
+00020d80   __nround
+00021280   __stack
+00020b20   __strasgi
+00021200   __trunc
+0001dbd0   __unlock
+00021260   _abort
+00001200   _adcbuffer
+0001dbe0   _bit_rev
+000217d0   _block
+00021140   _c_int00
+00000bf0   _clr_module_cfg
+00020e40   _copy_in
+0001fda0   _cos
+00003780   _d
+000217d4   _dChange
+000024c0   _dacbuffer
+00021080   _edma_complete_int
+00020c60   _exit
+00000314   _init_module
+000037d0   _input
+00000cec   _install_interrupt
+0001dd00   _main
+00020780   _memcpy
+00020f00   _modf
+000217cc   _newdat
+000217d8   _noise
+000047d0   _overlap
+000037c8   _phi
+00020fc0   _rand
+0001f980   _set_edma
+00000bc8   _set_module_cfg
+00020440   _sin
+0001db20   _sin_array
+000037c0   _theta
+00004b20   _w_fft
+00005320   _w_ifft
+00005b20   _x
+ffffffff   binit
+00021680   cinit
+00001200   edata
+000217dc   end
+00021280   etext
+ffffffff   pinit
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000001   __TI_args_main
+00000314   _init_module
+00000400   __STACK_SIZE
+00000bc8   _set_module_cfg
+00000bf0   _clr_module_cfg
+00000cec   _install_interrupt
+00001200   .data
+00001200   ___data__
+00001200   ___edata__
+00001200   _adcbuffer
+00001200   edata
+000024c0   _dacbuffer
+00003780   _d
+000037c0   _theta
+000037c8   _phi
+000037d0   _input
+000047d0   _overlap
+00004b20   _w_fft
+00005320   _w_ifft
+00005b20   _x
+0000db20   _H
+0001db20   _sin_array
+0001dbc0   __cleanup_ptr
+0001dbc4   __dtors_ptr
+0001dbc8   ___TI_enable_exit_profile_output
+0001dbcc   __lock
+0001dbd0   __unlock
+0001dbe0   .text
+0001dbe0   ___text__
+0001dbe0   _bit_rev
+0001dd00   _main
+0001f4a0   _DSPF_sp_cfftr2_dit
+0001f980   _set_edma
+0001fda0   _cos
+00020100   __divf
+00020440   _sin
+00020780   _memcpy
+000209c0   __auto_init
+00020b20   __c6xabi_strasgi
+00020b20   __strasgi
+00020c60   _exit
+00020d80   __nround
+00020e40   _copy_in
+00020f00   _modf
+00020fc0   _rand
+00021080   _edma_complete_int
+00021140   _c_int00
+000211c0   __args_main
+00021200   __trunc
+00021240   __nop
+00021260   C$$EXIT
+00021260   _abort
+00021280   ___etext__
+00021280   __stack
+00021280   etext
+00021680   __STACK_END
+00021680   ___cinit__
+00021680   cinit
+000217cc   $bss
+000217cc   .bss
+000217cc   ___bss__
+000217cc   _newdat
+000217d0   _block
+000217d4   _dChange
+000217d8   _noise
+000217dc   ___end__
+000217dc   end
+ffffffff   ___TI_pprof_out_hndl
+ffffffff   ___TI_prof_data_size
+ffffffff   ___TI_prof_data_start
+ffffffff   ___binit__
+ffffffff   ___c_args__
+ffffffff   ___pinit__
+ffffffff   binit
+ffffffff   pinit
+
+[75 symbols]

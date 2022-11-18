@@ -1,0 +1,7 @@
+
+menuitem "Energie limit" 
+slider EnergieLimit(0,100,1,1,EnergieLimitParameter) 
+/* minVal=1e9, maxVal=1e10, increment=1, pageIncrement=1 */ 
+{ 
+energielimit = EnergieLimitParameter; /* vary amplitude of sine */ 
+} 

@@ -1,0 +1,1 @@
+"./main.obj" "./functions.obj" "./defines_globals.obj" -l"libc.a" "../D_Mod_C6713_plus_D_Mod_PCM_EDMA_SDRAM.cmd" "../dsp67x.lib" 

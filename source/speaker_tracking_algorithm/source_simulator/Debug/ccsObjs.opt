@@ -1,0 +1,1 @@
+"./set_edma.obj" "./main.obj" -l"libc.a" "../dmod-c6713_dmod-pcm_test_EDMA.cmd" "../dsp67x.lib" 

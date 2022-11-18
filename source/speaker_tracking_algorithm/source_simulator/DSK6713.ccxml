@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configurations XML_version="1.2" id="configurations_0">
+    <configuration XML_version="1.2" id="configuration_0">
+        <instance XML_version="1.2" desc="Spectrum Digital XDS510USB Emulator" href="connections/SD510USB_Connection.xml" id="Spectrum Digital XDS510USB Emulator" xml="SD510USB_Connection.xml" xmlpath="connections"/>
+        <connection XML_version="1.2" id="Spectrum Digital XDS510USB Emulator">
+            <instance XML_version="1.2" href="drivers/sdgo6xusb.xml" id="drivers" xml="sdgo6xusb.xml" xmlpath="drivers"/>
+            <property Type="choicelist" Value="1" id="portAddr1"/>
+            <platform XML_version="1.2" id="platform_0">
+                <instance XML_version="1.2" desc="DSK6713" href="boards/dsk6713.xml" id="DSK6713" xml="dsk6713.xml" xmlpath="boards"/>
+            </platform>
+        </connection>
+    </configuration>
+</configurations>
