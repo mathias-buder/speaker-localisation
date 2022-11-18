@@ -5,6 +5,7 @@
 *.pyc
 
 # Latex temporary files
+*.texpadtmp
 *.aux
 *.bit
 *.blg*
@@ -23,3 +24,6 @@
 *.url
 *.svn
 *.toc
+*.nlo
+*.lol
+*.gz

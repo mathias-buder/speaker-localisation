@@ -1,0 +1,238 @@
+%---------------------------------------------------------------------------------------------------
+% Einstellungen
+% (gelten nur in Zusammenarbeit mit pdflatex)
+%---------------------------------------------------------------------------------------------------
+\documentclass[
+	pagesize,										% flexible Auswahl des Papierformats
+	a4paper,											% DIN A4
+	oneside,											% einseitiger Druck
+	BCOR5mm,											% Bindungskorrektur
+	headsepline,										% Strich unter der Kopfzeile
+	12pt,											% 12pt SchriftgrÃ¶Ãe
+	halfparskip,										% EuropÃ¤ischer Satz: Abstand zwischen AbsÃ¤tzen
+	abstracton,										% Spezielle Formatierung, die erlaubt, dass die
+													% Zusammenfassung vor dem Inhaltsverzeichnis steht
+	%draft,											% Es handelt sich um eine Vorabversion	
+	final,											% Es handelt sich um die endgÃ¼ltige Version
+	liststotoc,										% Tabellen- und Abbildungsverzeichnis im Inhaltsverzeichnis
+	idxtotoc,										% Index im Inhaltsverzeichnis
+	bibtotoc,										% Literaturverzeichnis im Inhaltsverzeichnis
+]{book}											% KOMA-Scriptklasse Report
+
+
+% book hatte ich in der Bachelorarbeit
+% article	  <>	 scrartcl
+% book	     <>	 scrbook
+% report	  <>	 scrreprt
+% letter	  <>	 scrlttr2
+
+%-------------------------------------------------------------------------
+% \usepackage[english,ngerman]{babel}					% deutsche Trennmuster
+%\addto\captionsngerman{\renewcommand{\figurename}{Abb.}}
+%\addto\captionsngerman{\renewcommand{\tablename}{Tab.}}
+\usepackage[T1]{fontenc}								% EC-Schriften, Trennstellen nach Umlauten
+\usepackage[utf8]{inputenc}							% direkte Umlauteingabe (Ã¤ statt "a)
+													% latin1/latin9 fÃ¼r unixoide Systeme
+													% (latin1 ist auch unter Win verwendbar)
+													% ansinew fÃ¼r Windows
+													% applemac Macs
+													% cp850 OS/2
+
+\usepackage{array,ragged2e}							% Wichtig fÃ¼r Abstandsformatierung
+
+%-------------------------------------------------------------------------
+
+% serifenlose Schrift als Standard
+% + alle fÃ¼r TeX benÃ¶tigten mathematischen
+%   Schriften einschlieÃlich der AMS-Symbole
+%\usepackage{cmbright}						
+
+% skalierte Helvetica als \sfdefault
+%\usepackage[scaled=.90]{helvet}				
+
+% Schriften Paket
+%\usepackage{times}
+% Courier als \ttdefault
+\usepackage{courier}
+
+%-------------------------------------------------------------------------
+% Anpassung der Kopf- und FuÃzeilen
+% \usepackage[automark]{scrpage2}
+% Korrekter Leerraum nach Befehlsdefinitionen
+\usepackage{xspace}
+% Dieses Package brauchen wir fÃ¼r den anderthalbzeiligen Abstand.
+\usepackage{setspace}
+\usepackage[pdftex]{graphicx}
+\usepackage[absolute,overlay]{textpos}
+\usepackage[final]{pdfpages}
+
+% Neuimplementierung des \cite-Kommandos
+\usepackage[numbers, square]{natbib}
+
+% Deutsche Bezeichnungen
+\usepackage{bibgerm}		
+					
+% placing boxes at absolute positions		
+\usepackage[absolute]{textpos}	
+			
+% include pages of external PDF documents	
+\usepackage[final]{pdfpages}			
+		
+% Spaltenbreite bis zur Seitenbreite dehnen	
+\usepackage{tabularx}					
+		
+% Paket zur Erstellung eines Stichwortverzeichnisses
+\usepackage{makeidx}				
+			
+% Automatische Erstellung des Stichwortverzeichnis
+\makeindex
+\usepackage[intoc, german, prefix]{nomencl}
+\makenomenclature
+
+\newcommand{\hyperlinkcolor}{blue}
+
+%-------------------------------------------------------------------------
+ \usepackage{graphicx}								% Zur Einbindung von PDF-Bildern
+ \usepackage[colorlinks,							% Einstellen und Laden des Hyperref-Pakets
+	pdftex,
+	bookmarks,
+	bookmarksopen=false,
+	bookmarksnumbered,
+	citecolor=\hyperlinkcolor,
+	linkcolor=\hyperlinkcolor,
+	urlcolor=\hyperlinkcolor,
+	filecolor=\hyperlinkcolor,
+	linktocpage,
+	pdfstartview=Fit,								% startet mit Ganzseitenanzeige
+	pdfsubject={Sprecherlokalisierung unter Verwendung von Mikrofonarrays},
+	pdftitle={Masterarbeit im Fachbereich Informations- \& Elektrotechnik an der HAW-Hamburg},
+	pdfauthor={Mathias Buder, mathias.buder@gmail.com}]{hyperref}
+ \pdfcompresslevel=9
+ 
+%-------------------------------------------------------------------------
+% Inhaltsverzeichnis und Abschnittnummerierung
+%-------------------------------------------------------------------------
+\setcounter{secnumdepth}{2}   % Ich habe recht kurze Kapitel. Die sollen nicht durchnummeriert sein.
+\setcounter{tocdepth}{2}
+
+%-------------------------------------------------------------------------% Abbildungsverzeichnis
+%-------------------------------------------------------------------------
+\graphicspath{{graphics/}}
+
+%-------------------------------------------------------------------------
+% Kopf- und FuÃzeilen
+%-------------------------------------------------------------------------
+%\pagestyle{scrheadings}
+%\clearscrheadings
+%\clearscrplain
+%\clearscrheadfoot
+%\ohead{\pagemark}
+%\ihead{\headmark}
+
+%-------------------------------------------------------------------------
+% Neue Befehle
+%-------------------------------------------------------------------------
+\input{einstellungen/neuebefehle.sty}
+
+%-------------------------------------------------------------------------
+% Trennung
+%-------------------------------------------------------------------------
+\input{einstellungen/trennungen.sty}
+
+%-------------------------------------------------------------------------
+% Anpassung der Parameter, die TeX bei der Berechnung der ZeilenumbrÃ¼che verwendet:
+%-------------------------------------------------------------------------
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+\widowpenalty=10000
+\vfuzz \hfuzz
+\raggedbottom
+
+
+%-------------------------------------------------------------------------
+% Meine Pakete:
+%-------------------------------------------------------------------------
+\setlength {\marginparwidth }{2cm}
+\usepackage{todonotes}
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{boolexpr,pdftexcmds,trace}
+%-------------------------------------------------------------------------
+%\usepackage[
+    %a4paper,
+    %left = 3cm,
+    %right = 1.0in,
+    %top= 1in,
+    %bottom = 0.8in    
+%]{geometry}
+%\usepackage{showframe} % Show page margin
+%-------------------------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\parindent0pt % do not indet line after new line
+\usepackage{trfsigns} % For transformation signs
+
+\usepackage[
+    format=hang,
+    labelfont=bf,
+    textfont=normalfont,
+    justification=justified
+]{caption}
+
+\usepackage{float} % To force figure position in desired place, use specifier H
+\usepackage{cancel}
+
+%-------------------------------------------------------------------------
+% Define listing colors
+\usepackage{color}
+\definecolor{backgroundcolor}{gray}{0.95}
+\definecolor{keywordcolor}{cmyk}{0.3,0.76,0,0}
+\definecolor{stringcolor}{cmyk}{0.2,0.89,0.97,0.04}
+\definecolor{numbergcolor}{cmyk}{0.84,0.64,0,0}
+\definecolor{commentgcolor}{cmyk}{0.70,0.14,0.96,0.39}
+
+% Define listing font
+% \usepackage[scaled=0.85]{luximono}
+
+% Define listing prperties
+\usepackage{listings}
+\lstset{
+language = C,
+numbers=left,
+numberstyle=\footnotesize \ttfamily,
+stepnumber=1,
+numbersep=5pt,
+frame=single,                   % adds a frame around the source code
+framexleftmargin=8mm,
+backgroundcolor=\color{backgroundcolor},
+xleftmargin = 0.9cm,
+linewidth = \textwidth,
+aboveskip = 0.5cm,
+%belowskip = 0.5cm,
+breaklines = true,
+breakatwhitespace = true,
+tabsize=2,
+basicstyle=\footnotesize \ttfamily,
+keywordstyle=\color{keywordcolor}\textbf \ttfamily,
+stringstyle=\color{stringcolor}\ttfamily,
+commentstyle=\color{commentgcolor}\small \ttfamily,
+numberstyle=\tiny,
+abovecaptionskip=10pt,
+captionpos=b
+escapeinside={(*@}{@*)},	% if you want to add a comment within your source code
+morekeywords={*,...}     	% if you want to add more keywords to the set
+}
+
+\renewcommand{\lstlistlistingname}{Quelltextverzeichnis}
+\renewcommand{\lstlistingname}{Quelltext}
+%-------------------------------------------------------------------------
+
+
+
+
+

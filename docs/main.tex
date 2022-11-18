@@ -1,0 +1,71 @@
+%--------------------------------------------------------------------------
+% Kodierung: Latin1
+%--------------------------------------------------------------------------
+% Voreinstellungen (Layout, neue Befehle, etc.)
+%--------------------------------------------------------------------------
+\input{einstellungen/grundeinstellungen}					% Die stilistischen Parameter
+\newcommand{\MyName}{Mathias Buder}
+\newcommand{\Title}{Sprecherlokalisierung eines Sprechers im Raum unter 
+				   Verwendung eines kugelförmigen Mikrofonarrays}
+
+
+%--------------------------------------------------------------------------
+% Anfang des Schriftstücks
+%--------------------------------------------------------------------------
+
+\begin{document}
+
+%--------------------------------------------------------------------------
+% Danksagung  
+%--------------------------------------------------------------------------
+	%\input{standard/danke}
+%--------------------------------------------------------------------------
+% Verzeichnisse
+%--------------------------------------------------------------------------
+	% \listoftodos									% ToDo-Verzeichnis
+	\tableofcontents								% Inhaltsverzeichnis
+	\listoftables									% Tabellenverzeichnis
+	\listoffigures									% Abbildungsverzeichnis
+	\lstlistoflistings
+%--------------------------------------------------------------------------
+% Teile
+%--------------------------------------------------------------------------
+
+	\input{kapitel/01_Einfuehrung.tex}
+	\input{kapitel/02_Konzeptionierung.tex}
+	\input{kapitel/03_Realisierung.tex}
+	\input{kapitel/04_Echtzeitversuch.tex}
+	\input{kapitel/05_Zusammenfassung.tex}
+	
+	
+%--------------------------------------------------------------------------
+% Literaturverzeichnis
+%--------------------------------------------------------------------------
+	% Anpassung an deutsche Zitierweise, Alphabetische Sortierung, Abkürzungen
+	\bibliographystyle{dinat}
+	
+
+	% Literaturverzeichnis
+	\bibliography{literatur/literatur}
+
+%--------------------------------------------------------------------------
+% Anhänge
+%--------------------------------------------------------------------------
+	%\appendix
+        %\input{kapitel/Anhang.tex}
+													% dieser Arbeit
+%	\input{anhang/quellcode/quellcode}				% Anhang B: Quellcode
+%--------------------------------------------------------------------------
+% Glossar
+%--------------------------------------------------------------------------
+	\printnomenclature
+%--------------------------------------------------------------------------
+% Stichwortverzeichnis
+%--------------------------------------------------------------------------
+	\printindex
+%--------------------------------------------------------------------------
+% Erklärung über Selbstständigkeit
+%--------------------------------------------------------------------------
+%	\asurency
+%--------------------------------------------------------------------------
+\end{document}

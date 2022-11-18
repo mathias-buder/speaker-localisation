@@ -1,0 +1,36 @@
+% Codierung: Larin1
+
+% ****************************************************************************************
+\chapter{Kreuzkorrelation periodischer Signale}
+\label{appx:KreuzkorrelationPeriodischerSignale} 
+% ****************************************************************************************
+Die Kreuzkorrelation zweier periodischer Signale der Form $x(t)=\cos(2\pi ft)$ und  $y(t) = \cos(2\pi f (t+\Delta t))$ liefert:
+
+\begin{equation}
+\label{eq:KorrPeriodisch1}
+r_{xy}(\tau) =\frac{1}{T} \int_{0}^{T} \cos(2\pi ft) \cdot \cos(2\pi f (t+\Delta t+\tau)) \mathrm dt
+\end{equation}
+
+Mit Verwendung der trigonometrischen Identität $\cos(\alpha) \cdot \cos(\beta) = \frac{1}{2}\left(\cos(\alpha - \beta) - \cos(\alpha + \beta)\right)$ folgt:
+
+\begin{equation}\label{eq:KorrPeriodisch2}
+    \begin{split}
+r_{xy}(\tau) = \frac{1}{T} \int_{0}^{T} & \frac{1}{2} ( \cos{(2\pi ft - 2\pi f (t+\Delta t+\tau))} \\ & - \cos{(2\pi ft + 2\pi f (t+\Delta t+\tau))} ) \mathrm dt
+    \end{split}
+\end{equation}
+
+Nach Vereinfachung durch zusammenfassen ergibt sich des weiteren:
+
+\begin{equation}
+\label{eq:KorrPeriodisch3}
+r_{xy}(\tau) = \frac{1}{2T} \cdot \cos{(2\pi f (\Delta t+\tau))} + \underbrace{\int_{0}^{T}  \cos(4\pi ft - 2\pi f (\Delta t+\tau))\mathrm dt}_{0}
+\end{equation}
+
+Der erste Term in \Eq{KorrPeriodisch2} kann aus dem Integral entfernt werden da keine Abhängigkeit zur Integrationsvariable $t$ mehr besteht. Die Integration des zweiten Terms über eine gesamte Periode $T$ liefert das Ergebnis Null da sich positive und negative Halbwellen der Cosinus-Funktion auslöschen. Als Ergebnis bleibt:
+
+\begin{equation}
+\label{eq:KorrPeriodisch4}
+r_{xy}(\tau) = \frac{1}{2T} \cdot \cos(2\pi f (\Delta t+\tau))
+\end{equation}
+
+Die Kreuzkorrelation periodischer Signale liefert nach \Eq{KorrPeriodisch4} eine ebenfalls periodische Kreuzkorrelationsfunktion $r_{xy}(\tau)$.

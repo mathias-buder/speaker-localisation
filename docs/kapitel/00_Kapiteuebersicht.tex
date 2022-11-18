@@ -1,0 +1,78 @@
+% Compile main-file when hitting typeset in this file
+%!TEX root = ../MasterThesis.tex
+%------------------------------------------------------------------------------------
+
+\
+\chapter{Einführung}
+	\section{Problemformulierung}
+	\section{Zielsetzung}
+
+
+\chapter{Konzeptionierung}
+	
+	\section{Grundlegende Annahmen und deren mathematische Zusammenhänge}
+		\subsection{Signalmodell}
+			\todo[inline]{Beschreibung des Signalmodels wie im Buch von Benisty
+			sowie Einführung der Variablen,Single-Source reverberant model, MIMO-System}
+			\missingfigure{Ein erklärendes Bild zum Signalmodel - Sprecher, 
+			Sensoren, Echo, Rauschen \dots}
+
+		\subsection{Sensormodell}
+		\todo[inline]{Geometrie, Wellenausbreitung (ebene Welle, Fernfeld),
+		Koordinatensystem,Mikrofonvektoren, Entwicklung 3D-Arrays wie in
+		\texttt{chap2-MIC.pdf}}
+		\missingfigure{Ein erklärendes Bild zum Mikrofonmodel, Koordinatensystem,
+		Projektion der DOA durch ebene Welle}
+
+	\section{Schätzungsverfahren}
+		\subsection{Kreuzkorrelation}
+			\subsubsection{Schnelle Kreuzkorrelation}
+				\todo[inline]{Erklärung der schnellen Korrelation mittels FFT,
+				Zeropadding, FFT-Shift sowie Hinweis auf Buch von Martin Werner
+				\cite{Book_SigSys_Werner}}
+				\missingfigure{Man könnte dazu noch eine passende Grafik 
+				(Zeropadding, FFT-Shift) erstellen}
+		\subsection{Mehrkanal-Kreuzkorrelationskoeffizient (MCCC)}
+
+	\section{Mikrofonarray}
+		\subsection{Untersuchung des kugelförmigen Mikrofonarrays}
+			\subsubsection{Schallausbreitung an schallharter Kugel}
+			
+		\subsection{Mikrofonarray Neudesign/Konstruktion}
+			\subsubsection{Räumlich-Äquidistantes Mikrofonarray}
+			\subsubsection{Räumlichs äquiwinkel Mikrofonarray}
+			\subsubsection{Räumliches Aliasing}
+			\subsubsection{Winkelauflösung}
+			
+
+		
+	\section{Simulation}
+		\subsection{Erstellung synthetischer Signale}
+		\subsection{Optimierungsverfahren}
+		\subsubsection{Suchgeschwindigkeit}
+		\subsubsection{Histogramm}
+		\subsubsection{Ausschlussverfahren}
+	
+	
+\chapter{Realisierung}
+
+	\section{Implementierung als Echtzeitsystem}
+		\subsection{Verwendete Hardware}
+			\subsubsection{EDMA-Verfahren}
+			\subsubsection{Doppel-Puffer-Verfahren}
+    
+    \section{Ermittlung der Systemparameter}
+        \subsection{Winkelauflösung}
+        \subsection{EDMA-Länge}
+        \subsection{Räumliches Aliasing}
+    
+    
+\chapter{Test und Auswertung}
+
+
+
+
+\chapter{Fazit / Ausblick}
+
+
+

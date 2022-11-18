@@ -1,0 +1,65 @@
+% ****************************************************************************************
+\chapter{Zusammenfassung}
+\label{chap:Zusammenfassung}
+% ****************************************************************************************
+In der vorliegenden Arbeit wurde auf Basis des Mehrkanal-Kreuzkorrelations-koeffizienten ein System entwickelt, das in der Lage ist, eine bewegte Sprachquelle innerhalb eines Raumes zu detektieren. Als grundlegende Voraussetzung galt hier die Anwendung der Model-Based-Development-Methode\footnote{Modellgetriebene Softwareentwicklung}, in der zunächst ein umfassendes mathematisches Modell entwickelt, simuliert und anschließend auf einer entsprechenden Hardware realisiert wird. Die gesamte Modellierung wurde dabei mit der Entwicklungsumgebung \matlab erstellt. Die anschließende Realisierung erfolgte auf Basis von Hardware der Firma \ti sowie dessen Programmierumgebung \ccs.
+
+
+Der hier implementierte Algorithmus lässt sich in folgende Teilschritte auflisten:
+
+\begin{enumerate}
+    \item Energieberechnung des Eingangssignals zur Klassifizierung des Signalblocks (stimmhaft, stimmlos)
+    \item Kreuzkorrelation aller Eingangssignale unter Verwendung der von \ti zur Verfügung gestellten DSP-Bibliothek
+    \item Verwendung der Korrelationsfunktionen zur räumlichen Suche/Detektion der Sprachquelle
+    \item Ergebnisglättung unter Verwendung eines Histogramms
+    \item Versenden der Ergebnisse mit Hilfe der serielle Schnittstelle
+\end{enumerate}
+
+Zur Einstellung der benötigten Systemparameter wurden zunächst entsprechende theoretische Überlegungen getätigt. Beim anschließenden Echtzeittest wurde allerdings festgestellt, dass die Energieschwelle, die Länge des Histogrammspeichers und dessen Schwelle abhängig von den gegebenen Raumeigenschaften empirisch ermittelt werden mussten.
+
+Neben der Entwicklung des Detektionsalgorithmus wurde darüber hinaus ein räumliches Mikrofonarray entworfen sowie gefertigt. Mit Hilfe des simplen Steckmechanismus konnte diese aufwandsarm sowie kostengünstig mit einer hohen Fertigungsgenauigkeit hergestellt werden. Des Weiteren ist es möglich, auf Grund des einfachen Klipp-Systems die empfindlichen Mikrofonkapseln der Forma \sennheiser unkompliziert zu entfernen und anderweitig einzusetzen. 
+
+
+% ****************************************************************************************
+\section{Bewertung der Ergebnisse}
+\label{sec:BewertungErgebnisse}
+% ****************************************************************************************
+Zur Bewertung der erzielten Ergebnisse werden zunächst die in \Chap{Einfuehrung} genannten Forderungen diskutiert.
+
+
+\paragraph{Verarbeitung von Sprachsignalen} - Der Algorithmus ist in der Lage, ein breitbandiges Sprachsignal zu verarbeiten da die Raumwinkel durch Analyse der Redundanz zwischen den einzelnen Mikrofonsignalen ermittelt werden. Auf Grund dessen ist das Schätzergebnis grundsätzlich unabhängig von den im Signal enthaltenen Frequenzen.
+
+
+\paragraph{Winkelauflösung} - Die Winkelauflösung ist lediglich abhängig von der Abtastfrequenz und kann im Hinblick auf das Auftreten des räumlichen Aliasing-Effekts nicht durch Vergrößerung der Array-Dimension erhöht werden. Auf Grund der rechenintesieven Operationen ist eine Erhöhung der Abtastfrequenz und somit der Winkelauflösung nur dich eine Erhöhung der zur Verfügung stehenden CPU-Taktschritte möglich. Diesbezüglich kann die hier erreichte Winkelauflösung durch ausreichend betrachtet werden. Während der Durchführung des Echtzeittests konnte jede Signalquelle auch bei kleinen Ortsänderungen verfolgt werden.  
+
+
+\paragraph{Rechenzeit} - Auf Grund der durch die EDMA-Blocklänge sowie die durch die Abtastfrequenz festgelegten maximalen Rechendauer musste ein Verfahren entwickelt werden, das in der Lange ist, den Raum erst in groben und anschließend sukzessiv in immer kleiner werdenden Winkelschritten abzusuchen. Obwohl durch diese Methode das Echtzeitkriterium erzielt wird, ergeben sich fehlerhaft erkannte Winkel bis hin zu kleinen Bereiche, an denen keine Position erkennt werden kann. Eine weitere Optimierung des Systems müsste dann an dieser Stelle fortgeführt werden.
+
+
+\paragraph{Winkelraum} - Im Vergleich zu den Arbeiten \cite{Master_Array_Pikora}
+ und \cite{Master_Array_Mueller}, in denen auf Grund der Arraygeometrie nur ein eingeschränkter Winkelbereich abgedeckt werden konnte, erzielt das hier entwickelte System sehr gute Ergebnisse. Auf Grund der räumlichen Arraygeometrie kann jeder Raumwinkel im Raster der Winkelauflösung abgebildet werden.
+ 
+ 
+
+Beim Betrachten des gesamten Projekts im Überblick wird ersichtlich, dass eine Methode gefunden wurde um mit Hilfe eines Acht-Kanal-Mikrofonarrays eine Sprachquelle im Raum zu detektieren. Die erzielten Messergebnisse des Echtzeitsystems in der ersten Version zeigen eine deutliche Tendenz. Zur Implementierung des Systems in einer realen Anwendung sind weiterführende Schritte notwendig, da hier die zwingende Notwendigkeit fehlerfreier Ergebnisse vorliegt.
+
+
+
+% ****************************************************************************************
+\section{Ausblick}
+\label{sec:Ausblick}
+% ****************************************************************************************
+Auf Grundlage dieser Arbeit könnte versucht werden, die Winkelauflösung durch sukzessive Signalinterpolation zu erhöhen. Dazu müsste zunächst die Schalleinfallsrichtung für eine fest eingestellte Winkelauflösung ermittelt werden. Anschließend könnte entsprechend dieser Quellenrichtung ein kürzeres Signalstück entnommen, interpoliert und erneut auf die Schalleinfallsrichting untersucht werden.
+
+Des Weiteren bestünde die Möglichkeit zur Untersuchung auf die Systemreaktion unter Verwendung der GCC-PHAT und deren Robustheit bei der Verwendung von Sprachsignalen. 
+
+Im Hinblick auf das realisierte Kreuzpeilungssystem in \citet{Master_Array_Mueller} könnte dieses um eine Dimension erweitert werden und Signalquellen im Raum peilen.
+
+
+
+
+
+
+
+
+
