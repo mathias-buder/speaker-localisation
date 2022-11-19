@@ -1,0 +1,93 @@
+%--------------------------------------------------------------------------
+% Voreinstellungen (Layout, neue Befehle, etc.)
+%--------------------------------------------------------------------------
+\input{einstellungen/grundeinstellungen}					% Die stilistischen Parameter
+
+%--------------------------------------------------------------------------
+% Anfang des Schriftstücks
+%--------------------------------------------------------------------------
+
+\begin{document}
+
+%--------------------------------------------------------------------------
+% Titelseite
+%--------------------------------------------------------------------------
+\begin{titlepage}
+	\begin{center}
+
+		\vspace*{2cm}
+		\huge
+		\textbf{Acoustic localisation of a speaker source in a reverberant environment}
+
+		\vspace{2.5cm}
+		\large
+		\textbf{Mathias Buder}
+
+		\vspace{0.25cm}
+		\small
+		\textnormal{mathias.buder@gmail.com}
+		
+
+		\vspace{3 cm}
+
+		\textbf{Zusammenfassung}
+
+	\end{center}
+
+In der vorliegenden Arbeit erfolgt die Entwicklung eines Echtzeitsystems zur
+räumlichen Detektion einer Sprachquelle unter Verwendung eins kugelförmigen
+Mikrofonarrays. Die gesamte im Vorfeld durchgeführte Simulation wurde dabei
+mit der Entwicklungsumgebung MATLAB R realisert. Die im zweiten Teil beschriebene Echtzeitimplementierung erfolgte auf Basis des D.Module.C6713 in
+der Programmiersprache C.
+
+\end{titlepage}
+
+%--------------------------------------------------------------------------
+% Verzeichnisse
+%--------------------------------------------------------------------------
+	% \listoftodos									% ToDo-Verzeichnis
+	\tableofcontents								% Inhaltsverzeichnis
+	\listoftables									% Tabellenverzeichnis
+	\listoffigures									% Abbildungsverzeichnis
+	\lstlistoflistings
+%--------------------------------------------------------------------------
+% Teile
+%--------------------------------------------------------------------------
+
+	\input{kapitel/01_Einfuehrung.tex}
+	\input{kapitel/02_Konzeptionierung.tex}
+	\input{kapitel/03_Realisierung.tex}
+	\input{kapitel/04_Echtzeitversuch.tex}
+	\input{kapitel/05_Zusammenfassung.tex}
+
+%--------------------------------------------------------------------------
+% Literaturverzeichnis
+%--------------------------------------------------------------------------
+	% Anpassung an deutsche Zitierweise, Alphabetische Sortierung, Abkürzungen
+	\bibliographystyle{dinat}
+	
+
+	% Literaturverzeichnis
+	\bibliography{literatur/literatur}
+
+%--------------------------------------------------------------------------
+% Anhänge
+%--------------------------------------------------------------------------
+	%\appendix
+        %\input{kapitel/Anhang.tex}
+													% dieser Arbeit
+%	\input{anhang/quellcode/quellcode}				% Anhang B: Quellcode
+%--------------------------------------------------------------------------
+% Glossar
+%--------------------------------------------------------------------------
+	\printnomenclature
+%--------------------------------------------------------------------------
+% Stichwortverzeichnis
+%--------------------------------------------------------------------------
+	\printindex
+%--------------------------------------------------------------------------
+% Erklärung über Selbstständigkeit
+%--------------------------------------------------------------------------
+%	\asurency
+%--------------------------------------------------------------------------
+\end{document}
