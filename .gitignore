@@ -27,3 +27,6 @@
 *.nlo
 *.lol
 *.gz
+*.fls
+*.xdv
+*.fdb*
