@@ -21,4 +21,7 @@ for i in range(len(files)):
     print('[' + str(i + 1) + ']' + ' Converting ' + files[i])
     # Store Pdf with convert_from_path function
     images = convert_from_path(files[i])
-    # images.save('page'+ str(i) +'.jpg', 'JPEG')
+    img_file_path = os.path.dirname(files[i]) + os.sep + Path(files[i]).stem + '_' + str(i) + '.jpg'
+    
+    images[0].save(img_file_path, 'JPEG')
+    print('Saved to: ' + img_file_path )
