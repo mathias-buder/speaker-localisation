@@ -3,7 +3,7 @@
   - [Objective](#objective)
 
 # Acoustic localisation of a speaker source in a reverberant environment
-
+...
 
 ## Problem formulation
 
